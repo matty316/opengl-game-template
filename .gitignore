@@ -1,2 +1,6 @@
-.vs/OpenGLGame
-obj/Win64/Debug
+.vs/*
+obj/*
+**.sln
+**.vcxproj
+**.vcxproj.filters
+**.vcxproj.user
