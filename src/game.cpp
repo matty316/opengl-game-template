@@ -50,14 +50,22 @@ float get_delta_time() {
 	return delta_time;
 }
 
+void process_input(GLFWwindow* window) {
+	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+		glfwSetWindowShouldClose(window, true);
+}
+
 void run() {
 	GLFWwindow* window = init_window();
 
 	while (!glfwWindowShouldClose(window)) {
+		process_input(window);
 		glClearColor(0.0f, 0.0f, 0.5f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		glfwSwapBuffers(window);
 		glfwPollEvents();
 	}
+
+	glfwDestroyWindow(window);
 }
