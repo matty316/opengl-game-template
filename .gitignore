@@ -6,3 +6,7 @@ obj/*
 **.vcxproj.user
 bin/*/**.exe
 bin/*/**.pdb
+bin/Debug
+lib
+Makefile
+OpenGLGame.make
